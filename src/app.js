@@ -23,22 +23,23 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather',
-    name: 'Andrew Mead'
+    name: 'Big Monkey'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About Me',
-    name: 'Andrew Mead'
+    name: 'Big Monkey'
   });
 });
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    helpText: 'This is some helpful text.',
+    helpText:
+      'Enter your location to get the current weather and rain forecast',
     title: 'Help',
-    name: 'Andrew Mead'
+    name: 'Big Monkey'
   });
 });
 
@@ -95,7 +96,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
-    name: 'Andrew Mead',
+    name: 'Big Monkey',
     errorMessage: 'Page not found.'
   });
 });
